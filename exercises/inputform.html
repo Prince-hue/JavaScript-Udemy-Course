@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+    }
+
+    form {
+      background-color: #fff;
+      padding: 50px;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      margin: 30vh auto;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      font-size: 16px;
+    }
+
+    button {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 3px;
+      cursor: pointer;
+      font-size: 16px;
+      margin: 6px 0px;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    #output {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <form>
+    <label for="name">Name:</label>
+    <input type="text" id="name">
+    <button type="button" onclick="getValue()">Submit</button>
+  </form>
+  <p id="output"></p>
+
+  <script>
+    const inputElement = document.getElementById("name");
+    const outputElement = document.getElementById("output");
+
+    function getValue() {
+      const userInput = inputElement.value;
+      outputElement.textContent = "You entered: " + userInput;
+    }
+  </script>
+</body>
+</html>
